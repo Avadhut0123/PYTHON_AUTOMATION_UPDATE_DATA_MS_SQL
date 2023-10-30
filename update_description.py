@@ -4,8 +4,8 @@ import os
 
 class Update_DESCRIPTION:
     global cur
-    conn = ("""driver={SQL Server};server=10.10.10.56;database=EMIZA-AUGMENTED-TEST;
-        trusted_connection=no;UID=CCS02;PWD=Pass@1234;IntegratedSecurity = true;""")
+    conn = ("""driver={SQL Server};server={{SQL Port}};database={{SQL DB_NAME}};
+        trusted_connection=no;UID={{SQL UID}};PWD={{SQL Pass}};IntegratedSecurity = true;""")
     conx = pyodbc.connect(conn)
     cur = conx.cursor()
 
